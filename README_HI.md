@@ -33,3 +33,13 @@ Android का SpeechRecognizer आम तौर पर लगातार backg
 
 ## Female Ravi AI Live Wallpaper
 प्रोजेक्ट में `Ravi AI Female Live Wallpaper` सेवा जोड़ी गई है। Build/Install के बाद Android के Wallpaper picker में Live Wallpapers के अंतर्गत इसे चुनें। अभी यह generated female AI scene को लाइव-वॉलपेपर सेवा के माध्यम से दिखाता है; यह वास्तविक बोलती/चलती 3D लड़की नहीं है। Voice assistant अलग से ऐप के माइक्रोफोन बटन से चलता है।
+
+
+## GitHub Actions से APK बनाना (मोबाइल से)
+1. इस ZIP को Extract करें।
+2. इसकी अंदर की सभी फाइलें और `.github` hidden folder सहित repository के root में upload करें। ZIP को repository में रखने भर से build नहीं होगा।
+3. GitHub → Actions खोलें। `Build Ravi AI APK` workflow चलना चाहिए।
+4. सफल run खोलें → Artifacts → `RaviAI-debug-apk` डाउनलोड करें।
+5. ZIP artifact extract करके `app-debug.apk` install करें।
+
+इस build में voice assistant push-to-talk है। Female TTS आवाज़ फोन में उपलब्ध Hindi voice पर निर्भर करती है। Live wallpaper अभी static image को wallpaper service से दिखाता है; facial animation/AI conversation और always-on wake word शामिल नहीं हैं।
